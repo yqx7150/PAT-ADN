@@ -1,0 +1,95 @@
+!!python/object:adn.utils.misc.EasyDict
+opt:
+  batch_size: 2
+  checkpoints_dir: runs/
+  dataset:
+    dataset_type: nature_image
+    deep_lesion:
+      blacklist: data/deep_lesion/blacklist.json
+      dataset_dir: data/deep_lesion/train
+      load_mask: false
+      normalize: true
+      partial_holdout: 0.5
+      random_flip: true
+      random_mask: true
+    nature_image:
+      a_dir: data/nature_image/train/artifact
+      b_dir: data/nature_image/train/no_artifact
+      crop_size: 256
+      load_size: 256
+      random_flip: true
+    spineweb:
+      a_dir: data/nature_image/train/artifact
+      a_range:
+      - -1000.0
+      - 2000.0
+      b_dir: data/nature_image/train/no_artifact
+      b_range:
+      - -1000.0
+      - 2000.0
+      random_flip: true
+  last_epoch: last
+  learn:
+    beta1: 0.5
+    beta2: 0.999
+    gamma: 0.5
+    lr: 0.0001
+    step_size: 100000.0
+    weight_decay: 0.0001
+  loss:
+    gt_art: true
+    wgts:
+      art:
+      - l1
+      - 15.0
+      gh:
+      - gh
+      - 1
+      gl:
+      - gl
+      - 1
+      hh:
+      - l1
+      - 15.0
+      hlh:
+      - l1
+      - 15.0
+      lh:
+      - l1
+      - 0.0
+      lhl:
+      - l1
+      - 0.0
+      ll:
+      - l1
+      - 15.0
+  metrics_step: 1
+  model:
+    adn:
+      base_ch: 64
+      down_norm: instance
+      fuse: true
+      input_ch: 3
+      num_down: 2
+      num_residual: 4
+      num_sides: 3
+      res_norm: instance
+      shared_decoder: false
+      up_norm: layer
+    d_type: nlayer
+    g_type: adn
+    nlayer:
+      input_nc: 3
+      n_layers: 2
+      ndf: 64
+      norm_layer: instance
+  num_epochs: 50
+  num_workers: 4
+  print_step: 1
+  save_step: 1
+  use_gpu: true
+  visual_window:
+  - 0.0
+  - 1.0
+  visualize_step: 100
+  window_size: 100
