@@ -33,6 +33,9 @@ Fig. 3. Comparison of artifact removal capabilities of U-Net and PAT-ADN in in v
 * Sparse-view reconstruction for photoacoustic tomography combining diffusion model with model-based iteration      
 [<font size=5>**[Paper]**</font>](https://www.sciencedirect.com/science/article/pii/S2213597923001118)       [<font size=5>**[Code]**</font>](https://github.com/yqx7150/PAT-Diffusion)
 
+* Score-based generative model-assisted information compensation for high-quality limited-view reconstruction in photoacoustic tomography      
+[<font size=5>**[Paper]**</font>](https://www.sciencedirect.com/science/article/pii/S2213597924000405)       [<font size=5>**[Code]**</font>](https://github.com/yqx7150/Limited-view-PAT-Diffusion)
+
 * Generative model for sparse photoacoustic tomography artifact removal      
 [<font size=5>**[Paper]**</font>](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12745/1274503/Generative-model-for-sparse-photoacoustic-tomography-artifact-removal/10.1117/12.2683128.short?SSO=1)   
 
